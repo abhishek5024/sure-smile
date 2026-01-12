@@ -1,0 +1,12 @@
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/controller/AppointmentController.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/entity/Appointment.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/service/AppointmentService.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/repository/SlotRepository.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/AppointmentServiceApplication.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/exception/AppointmentNotFoundException.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/exception/SlotUnavailableException.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/dto/AppointmentResponse.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/dto/CreateSlotRequest.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/dto/BookAppointmentRequest.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/repository/AppointmentRepository.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/appointment-service/src/main/java/com/clinic/appointmentservice/entity/Slot.java
