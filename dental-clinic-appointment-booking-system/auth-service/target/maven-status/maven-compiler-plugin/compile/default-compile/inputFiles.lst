@@ -1,0 +1,12 @@
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/entity/User.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/config/SecurityConfig.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/service/UserDetailsServiceImpl.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/service/AuthService.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/repository/UserRepository.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/dto/RegisterRequest.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/controller/AuthController.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/AuthServiceApplication.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/security/JwtAuthenticationFilter.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/security/JwtUtil.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/dto/LoginRequest.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/auth-service/src/main/java/com/clinic/authservice/dto/AuthResponse.java
