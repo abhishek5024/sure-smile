@@ -5,7 +5,13 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "slots", uniqueConstraints = @UniqueConstraint(columnNames = {"doctor_id", "date", "start_time"}))
+@Table(
+    name = "slots",
+    uniqueConstraints = @UniqueConstraint(columnNames = {"doctor_id", "date", "start_time"}),
+    indexes = {
+        @Index(name = "idx_doctor_date", columnList = "doctor_id, date")
+    }
+)
 public class Slot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

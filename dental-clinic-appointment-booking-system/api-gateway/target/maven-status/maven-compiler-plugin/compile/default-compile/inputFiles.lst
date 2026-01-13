@@ -1,0 +1,3 @@
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/api-gateway/src/main/java/com/clinic/gateway/ApiGatewayApplication.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/api-gateway/src/main/java/com/clinic/gateway/util/JwtUtil.java
+/Users/I529002/sureSmile1/dental-clinic-appointment-booking-system/api-gateway/src/main/java/com/clinic/gateway/filter/JwtAuthFilter.java

@@ -1,0 +1,3 @@
+com/clinic/gateway/filter/JwtAuthFilter.class
+com/clinic/gateway/ApiGatewayApplication.class
+com/clinic/gateway/util/JwtUtil.class
