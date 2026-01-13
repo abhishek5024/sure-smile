@@ -1,14 +1,21 @@
 package com.clinic.appointmentservice.service;
 
-import com.clinic.appointmentservice.dto.*;
-import com.clinic.appointmentservice.entity.*;
-import com.clinic.appointmentservice.exception.*;
-import com.clinic.appointmentservice.repository.*;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import java.util.List;
-import java.util.stream.Collectors;
+
+import com.clinic.appointmentservice.dto.AppointmentResponse;
+import com.clinic.appointmentservice.dto.BookAppointmentRequest;
+import com.clinic.appointmentservice.dto.CreateSlotRequest;
+import com.clinic.appointmentservice.entity.Appointment;
+import com.clinic.appointmentservice.entity.Slot;
+import com.clinic.appointmentservice.exception.AppointmentNotFoundException;
+import com.clinic.appointmentservice.exception.SlotUnavailableException;
+import com.clinic.appointmentservice.repository.AppointmentRepository;
+import com.clinic.appointmentservice.repository.SlotRepository;
 
 @Service
 public class AppointmentService {

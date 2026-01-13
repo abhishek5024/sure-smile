@@ -1,10 +1,12 @@
 package com.clinic.gateway.util;
 
+import java.util.Base64;
+
+import javax.crypto.SecretKey;
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import javax.crypto.SecretKey;
-import java.util.Base64;
 
 public class JwtUtil {
     private final SecretKey secretKey;
