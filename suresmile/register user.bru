@@ -1,0 +1,30 @@
+meta {
+  name: register user
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8081/auth/register
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "name": "Alice Patient",
+    "email": "alice@clini.com",
+    "password": "password123",
+    "role": "PATIENT"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

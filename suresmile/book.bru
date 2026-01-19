@@ -1,0 +1,36 @@
+meta {
+  name: book
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8082/appointments/book
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+  Authorization: Bearer <eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGljZUBjbGluaS5jb20iLCJyb2xlIjoiUEFUSUVOVCIsImlhdCI6MTc2ODI3NTk4MiwiZXhwIjoxNzY4Mjc5NTgyfQ.WiPD0szXlp7g25huwEinDgPCehvPP64lOhqkioIEWdeOSyMgBwF3aZLDNrGLFf9QZoyceGSDTQE1HGjziL5U0A>
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGljZUBjbGluaS5jb20iLCJyb2xlIjoiUEFUSUVOVCIsImlhdCI6MTc2ODI3NTk4MiwiZXhwIjoxNzY4Mjc5NTgyfQ.WiPD0szXlp7g25huwEinDgPCehvPP64lOhqkioIEWdeOSyMgBwF3aZLDNrGLFf9QZoyceGSDTQE1HGjziL5U0A
+}
+
+body:json {
+  {
+    "patientId": 1,
+    "doctorId": 1,
+    "date": "2026-01-15",
+    "startTime": "07:00",
+    "endTime": "07:30"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -16,6 +16,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import jakarta.annotation.PostConstruct;
+
 @Service
 public class AuthService {
     @Autowired
@@ -52,15 +54,33 @@ public class AuthService {
     }
 
     public AuthResponse loginDoctor(LoginRequest request) {
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        User user = userRepository.findByEmail(request.getEmail())
-                .orElseThrow(() -> new RuntimeException("User not found"));
-        if (!user.getRole().name().equals("DOCTOR")) {
-            throw new RuntimeException("Not a doctor account");
+        try {
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
+            // Debug: Print authentication details
+            System.out.println("[DEBUG] Authenticated: " + authentication.isAuthenticated());
+            System.out.println("[DEBUG] Principal: " + authentication.getPrincipal());
+            System.out.println("[DEBUG] Authorities: " + authentication.getAuthorities());
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+            User user = userRepository.findByEmail(request.getEmail())
+                    .orElseThrow(() -> new RuntimeException("User not found"));
+            System.out.println("[DEBUG] User loaded: " + user.getEmail() + ", role: " + user.getRole());
+            if (!user.getRole().name().equals("DOCTOR")) {
+                System.out.println("[DEBUG] Not a doctor account, role found: " + user.getRole());
+                throw new RuntimeException("Not a doctor account");
+            }
+            String token = jwtUtil.generateToken(user.getEmail(), user.getRole().name());
+            System.out.println("[DEBUG] JWT generated: " + token);
+            return new AuthResponse(token, user.getRole().name(), user.getId());
+        } catch (Exception e) {
+            System.out.println("[DEBUG] Authentication failed: " + e.getClass().getSimpleName() + " - " + e.getMessage());
+            throw e;
         }
-        String token = jwtUtil.generateToken(user.getEmail(), user.getRole().name());
-        return new AuthResponse(token, user.getRole().name(), user.getId());
+    }
+
+    @PostConstruct
+    public void printDoctorPasswordHash() {
+        String hash = passwordEncoder.encode("password123");
+        System.out.println("[DEBUG] Bcrypt hash for password123: " + hash);
     }
 }

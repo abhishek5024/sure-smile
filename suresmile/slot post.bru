@@ -1,0 +1,26 @@
+meta {
+  name: slot post
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8082/appointments/slots
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "doctorId": 1,
+    "date": "2026-01-15",
+    "startTime": "07:00",
+    "endTime": "07:30",
+    "available": true
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

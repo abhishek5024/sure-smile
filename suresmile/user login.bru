@@ -1,0 +1,28 @@
+meta {
+  name: user login
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8081/auth/doctor/login
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "email": "doctor1@clinic.com",
+    "password": "password123"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

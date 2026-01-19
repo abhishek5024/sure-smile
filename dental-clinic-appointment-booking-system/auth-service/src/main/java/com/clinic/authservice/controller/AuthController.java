@@ -33,6 +33,8 @@ public class AuthController {
 
     @PostMapping("/doctor/login")
     public ResponseEntity<AuthResponse> doctorLogin(@RequestBody LoginRequest request) {
+            System.out.println("[DEBUG] doctorLogin endpoint hit for: " + request.getEmail());
+
         AuthResponse response = authService.loginDoctor(request);
         return ResponseEntity.ok(response);
     }
